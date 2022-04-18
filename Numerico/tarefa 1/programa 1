@@ -1,0 +1,26 @@
+
+	
+N =single(10000);  #quantidade de termos do somatório
+sn = single(0);  #valor do somatório aproximado a S
+k = single(1);  
+s = single(((pi^2) / 8));  #valor de S
+
+n = []
+m = []
+
+while k <= N
+    
+	sn = single(sn + (1/(2*k-1)^2));
+    k= single(k + 1);
+	
+	n = single([n log(k-1)]); #matriz de contagem dos elementos
+	erro = single(abs(sn - s)); #erro absoluto
+	m = single([m log(erro)]); #matriz que armazena os erros
+
+end
+
+erro
+sn
+plot(n, m)
+title('log(erro) x log(N)')
+

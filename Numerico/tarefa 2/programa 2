@@ -1,0 +1,44 @@
+%%%%%%%%% inputs %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+a = 2 ; %extremidade do intervalo
+b = 3; %extremidade do intervalo
+f = @(x) (x*log10(x)-1); %funcao definida	
+
+%%%%%%%%%%% variaveis %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+k =0; %contador de iteracoes
+incerteza = 10^-4; %incerteza base
+x = 0;
+inc = abs(x) - incerteza; %incerteza do x obtido
+c = f(a)*f(b); %verificacao se há raiz no intervalo
+
+sa = f(a) / abs(a);
+sb = f(b) / abs(b);
+
+%%%%%%%%%%%% iteracoes %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+if (c > 0)
+	a = 'nao esta no intervalo';
+	disp(a)
+	end
+
+if (c < 0)
+	while (inc > 0)
+		k = k + 1
+		x = (a*f(b)-b(f(a)))/(f(b)-f(a))
+		sx = x / abs(x);
+	
+		if (sx = sa)
+			a = x;
+		end
+	
+		if (sx = sa)
+			b = x;
+		end
+	
+	end
+end
+
+iteracoes = k
+x
+%----------------------------------------------------------------------------------------
