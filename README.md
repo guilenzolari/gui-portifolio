@@ -1,4 +1,4 @@
 # gui-portifolio
-My repository (college work, scientific initiation, personal projects).
+Repositório da faculdade
 
-Esses são alguns programas que acabei criando para as tarefas da faculdade, para treinar novas linguagens e para testar alguns algoritimos.
+Esses são alguns programas que acabei criando para as tarefas e trabalhos da faculdade
